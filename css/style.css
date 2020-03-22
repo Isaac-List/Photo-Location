@@ -1,0 +1,25 @@
+body {
+    margin: 0;
+}
+
+#main {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+#form {
+    display: flex;
+    flex-flow: column;
+    flex-grow: 1;
+    padding: 24px;
+    background: yellow;
+}
+
+#form > * {
+    margin: 8px;
+}
+
+#display {
+    flex-grow: 2;
+    background: blue;
+}

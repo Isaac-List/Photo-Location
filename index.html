@@ -5,33 +5,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
     <link rel="stylesheet" type="text/css" href="css/style.css">
+
+    <!-- Bootstrap -->
     <link rel="stylesheet"
     href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
     integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
     crossorigin="anonymous">
-    
-    <title>Mashup Project</title>
+
+    <!-- MapQuest -->
+    <script src="https://api.mqcdn.com/sdk/mapquest-js/v1.3.2/mapquest.js"></script>
+    <link type="text/css" rel="stylesheet" href="https://api.mqcdn.com/sdk/mapquest-js/v1.3.2/mapquest.css"/>
+
+    <title>Photo Locations</title>
 </head>
 
 <body>
 
     <div id="main">
-    
+
         <div id="form" class="form-group">
-            <h1>Enter a Twitter Handle</h1>
-            <input type="text" id="handle">
-            <button class="btn btn-dark">Go!</button>
+            <h1>Enter a Photo Keyword</h1>
+            <input type="text" id="searchBox">
+            <button class="btn btn-dark" onclick="searchPhotos()">Go!</button>
         </div>
-        
-        <div id="display" class="container">
+
+        <div id="display">
             <!-- Populated by JS with API information -->
         </div>
-    
+
     </div>
 
-    <script 
+    <!-- Bootstrap -->
+    <script
         src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous">
@@ -46,10 +53,11 @@
         integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm"
         crossorigin="anonymous">
     </script>
-    
-    <script type="text/javascript" src="../js/model.js"></script>
-    <script type="text/javascript" src="../js/view.js"></script>
-    <script type="text/javascript" src="../js/controller.js"></script>
+
+    <!-- My Scripts -->
+    <script type="text/javascript" src="js/model.js"></script>
+    <script type="text/javascript" src="js/view.js"></script>
+    <script type="text/javascript" src="js/controller.js"></script>
 
 </body>
 

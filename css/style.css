@@ -13,6 +13,7 @@ body {
     flex-grow: 1;
     padding: 24px;
     background: yellow;
+    margin-bottom: 0 !important;
 }
 
 #form > * {
@@ -22,4 +23,21 @@ body {
 #display {
     flex-grow: 2;
     background: blue;
+    padding: 24px;
 }
+
+.images {
+    padding: 12px;
+    margin: 4px;
+    background: pink;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+
+.mapBox {
+    background: green;
+    width: 300px;
+    height: 300px;
+}
+

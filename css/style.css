@@ -35,6 +35,11 @@ body {
     justify-content: space-between;
 }
 
+.images > img {
+    height: 250px;
+    width: auto;
+}
+
 .mapBox {
     background: green;
     width: 300px;

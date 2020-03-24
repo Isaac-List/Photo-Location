@@ -19,7 +19,6 @@ class DisplayView {
                 // Image
                 let image = document.createElement("img");
                 image.setAttribute("src", photo.urls.regular);
-                image.setAttribute("style", "width: 300px;");
                 container.appendChild(image);
                 
                 // Create a map

@@ -21,7 +21,12 @@ class DisplayView {
                 image.setAttribute("src", photo.urls.regular);
                 container.appendChild(image);
                 
-                // Create a map
+                // Location Caption
+                let cap = document.createElement("p");
+                cap.innerHTML = photo.user.location;
+                container.appendChild(cap);
+                
+                // Map
                 let mapDiv = document.createElement("div");
                 mapDiv.setAttribute("id", photo.id);
                 mapDiv.setAttribute("class", "mapBox");

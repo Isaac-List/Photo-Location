@@ -26,15 +26,10 @@ class DisplayView {
                 mapDiv.setAttribute("id", photo.id);
                 mapDiv.setAttribute("class", "mapBox");
                 container.appendChild(mapDiv);
+                MapBuilder.drawMap(photo.id, photo.user.location);
                 
                 // Attach container to display area
                 target.appendChild(container);
-            }
-        }
-        
-        for (const photo of photosJSON) {
-            if (photo.user.location != null) {
-                MapBuilder.drawMap(photo.id, photo.user.location);
             }
         }
     }

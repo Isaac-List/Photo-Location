@@ -8,21 +8,38 @@ class MapBuilder {
     constructor() {
         this._key = "lYrP4vF3Uk5zgTiGGuEzQGwGIVDGuy24";
     }
+    
+    async getLatLong(placeName) {
+        let url = `http://open.mapquestapi.com/geocoding/v1/address?key=${this._key}&location=${placeName}`;
+        return fetch(url)
+        .then(response => response.json())
+        .catch(error => console.log(error));
+    }
 
-    drawMap(divID, placeName) {
+    async drawMap(divID, placeName) {
         L.mapquest.key = this._key;
         
+        // this is using the openStreetMap data, there's also a mapquest one
+        let latlong = await this.getLatLong(placeName);
+        let lat = latlong.results[0].locations[0].latLng.lat;
+        let lon = latlong.results[0].locations[0].latLng.lng;
+        
         let map = L.mapquest.map(divID, {
-            center: [0, 0],
+            center: [lat, lon],
             layers: L.mapquest.tileLayer('map'),
             zoom: 8
         });
+        
+        let caption = document.createElement("p");
+        caption.innerHTML = placeName;
+        document.querySelector(`#${divID}`).appendChild(caption);
                 
         // Use geocoding feature to find place by string name
-        L.mapquest.geocoding().geocode(placeName);
+        // Don't use if > 1 map, it messes things up :(
+        // L.mapquest.geocoding().geocode(placeName);
 
-        // Add a zoom control
-        map.addControl(L.mapquest.control());
+        // Add a control to the map -- Don't really need this
+        // map.addControl(L.mapquest.control());
     }
 }
 

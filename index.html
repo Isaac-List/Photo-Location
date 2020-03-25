@@ -36,6 +36,28 @@
         </div>
 
     </div>
+    
+    <!--
+    <div id="map" style="width: 300px; height: 300px;"></div>
+    <script type="text/javascript">
+        window.onload = function() {
+            let id = "map";
+            L.mapquest.key = 'lYrP4vF3Uk5zgTiGGuEzQGwGIVDGuy24';
+
+            var map = L.mapquest.map(id, {
+                center: [0, 0],
+                layers: L.mapquest.tileLayer('map'),
+                zoom: 12
+            });
+            
+            // Use geocoding feature to find place by string name
+            L.mapquest.geocoding().geocode('Windsor, Ontario');
+
+            // Add a zoom control to the map
+            map.addControl(L.mapquest.control());
+        }
+    </script>
+    -->
 
     <!-- Bootstrap -->
     <script

@@ -4,16 +4,17 @@ body {
 
 #main {
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: column;
 }
 
 #form {
     display: flex;
     flex-flow: column;
-    flex-grow: 1;
-    padding: 24px;
-    background: yellow;
-    margin-bottom: 0 !important;
+    text-align: center;
+    background: wheat;
+    padding: 16px;
+    margin: 12px;
+    box-shadow: 0 0 4px 0px rgba(0, 0, 0, 0.15);
 }
 
 #form > * {
@@ -21,23 +22,24 @@ body {
 }
 
 #display {
-    flex-grow: 2;
-    background: blue;
-    padding: 24px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
 }
 
 .images {
     padding: 12px;
-    margin: 4px;
-    background: pink;
+    margin: 16px;
+    background: lightgrey;
     display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
+    flex-flow: column;
+    box-shadow: 0 0 4px 0px rgba(0, 0, 0, 0.15);
+    border-radius: 12px;
 }
 
 .images > img {
-    height: 250px;
-    width: auto;
+    height: auto;
+    width: 300px;
 }
 
 .mapBox {

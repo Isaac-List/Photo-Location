@@ -1,10 +1,11 @@
 body {
-    margin: 0;
+    background: #dabfbf !important;
 }
 
 #main {
     display: flex;
     flex-flow: column;
+    background: #dabfbf;
 }
 
 #form {
@@ -23,23 +24,33 @@ body {
 
 #display {
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: column;
     justify-content: center;
 }
 
 .images {
     padding: 12px;
     margin: 16px;
-    background: lightgrey;
+    background: wheat;
     display: flex;
-    flex-flow: column;
+    flex-flow: row wrap;
+    justify-content: space-between;
     box-shadow: 0 0 4px 0px rgba(0, 0, 0, 0.15);
     border-radius: 12px;
 }
 
 .images > img {
-    height: auto;
-    width: 300px;
+    height: 300px;
+    width: auto;
+}
+
+.caption {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    padding: 16px;
+    font-size: 24px;
+    text-align: center;
 }
 
 .mapBox {

@@ -16,15 +16,24 @@ class DisplayView {
             
             // Only display image&map if a location is available
             if (photo.user.location != null) {
+                console.log(photo.user);
                 // Image
                 let image = document.createElement("img");
                 image.setAttribute("src", photo.urls.regular);
                 container.appendChild(image);
                 
-                // Location Caption
+                // Location and user Caption
+                let captionBox = document.createElement("div");
+                captionBox.classList = "caption";
+
+                let user = document.createElement("p");
                 let cap = document.createElement("p");
+                user.innerHTML = `Photographer: ${photo.user.name}`;
                 cap.innerHTML = photo.user.location;
-                container.appendChild(cap);
+
+                captionBox.appendChild(user);
+                captionBox.appendChild(cap);
+                container.appendChild(captionBox);
                 
                 // Map
                 let mapDiv = document.createElement("div");
